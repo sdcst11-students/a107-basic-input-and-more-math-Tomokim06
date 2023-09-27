@@ -15,3 +15,24 @@ Enter a length in centimeters: 32
 32 centimeters is 1 feet and 1 inches
 ```
 """
+
+import operator
+
+question = ("enter a length in centimeters: ")
+
+a = float(input(question))
+
+F = a/30.48
+F = round(F,0)
+
+t = a% 30.48
+
+i = round(t/2.54,0)
+
+print(f"{a} centimeters is {F} feet and {i}inches.")
+
+
+
+
+
+
