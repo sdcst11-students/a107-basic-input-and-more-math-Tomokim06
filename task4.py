@@ -16,23 +16,22 @@ Enter a length in centimeters: 32
 ```
 """
 
-import operator
+import math
 
 question = ("enter a length in centimeters: ")
 
 a = float(input(question))
 
 F = a/30.48
+F = math.floor(F)
+
+if (F<1): F = 0
+
+
 F = round(F,0)
 
 t = a% 30.48
 
 i = round(t/2.54,0)
 
-print(f"{a} centimeters is {F} feet and {i}inches.")
-
-
-
-
-
-
+print(f"{a} centimeters is {F} feet and {i} inches.")
